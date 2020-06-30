@@ -43,7 +43,7 @@ const Index = () => {
                       <div className="hero-section-content">
                         <h3> Full Stack Web Developer </h3>
                         <div className="hero-section-content-intro">
-                          Please have a look at my portfolio and history.
+                          Please have a look at my Portfolio and History.
                         </div>
                       </div>
                       <img className="image" src="/images/section-1a.png" />
