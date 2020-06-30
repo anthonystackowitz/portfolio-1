@@ -56,7 +56,7 @@ export async function getStaticPaths() {
     };
   });
   // fallback false means pages not found will be resolved into 404 pages
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
