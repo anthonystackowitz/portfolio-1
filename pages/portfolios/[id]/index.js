@@ -34,7 +34,7 @@ const Portfolio = (props) => {
                   target="_"
                   className="btn btn-lg btn-secondary"
                 >
-                  Visit Company
+                  Visit Github
                 </a>
               </p>
             </main>
