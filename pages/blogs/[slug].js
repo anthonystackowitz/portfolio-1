@@ -3,11 +3,13 @@ import BasePage from "components/BasePage";
 import { Row, Col } from "reactstrap";
 import { useGetUser } from "actions/user";
 import { SlateView } from "slate-simple-editor";
+import { useRouter } from "next/router";
 
 import BlogApi from "lib/api/blogs";
 
 const BlogDetail = ({ blog }) => {
   const { data, loading } = useGetUser();
+  const router = useRouter();
   return (
     <BaseLayout user={data} loading={loading}>
       <BasePage
@@ -16,9 +18,14 @@ const BlogDetail = ({ blog }) => {
         metaDescription={blog.subtitle}
       >
         <Row>
-          <Col md={{ size: 8, offset: 2 }}>
-            <SlateView initialContent={blog.content} />
-          </Col>
+          {router.isFallback && (
+            <h1>Please wait 1 minute for the server to load the Blog</h1>
+          )}
+          {!router.isFallback && (
+            <Col md={{ size: 8, offset: 2 }}>
+              <SlateView initialContent={blog.content} />
+            </Col>
+          )}
         </Row>
       </BasePage>
     </BaseLayout>
@@ -30,7 +37,7 @@ export async function getStaticPaths() {
   const blogs = json.data;
   const paths = blogs.map((b) => ({ params: { slug: b.slug } }));
   debugger;
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {
