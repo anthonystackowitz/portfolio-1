@@ -19,7 +19,7 @@ const Blogs = ({ blogs }) => {
     >
       <Masthead imagePath="/images/home-bg.jpg">
         <h1>Blogs</h1>
-        <span className="subheading">Programming, travelling...</span>
+        <span className="subheading">Some of my thoughts...</span>
       </Masthead>
       <BasePage title="Blogs - Anthony Stachowitz" className="blog-body">
         <Row>
