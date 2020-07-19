@@ -36,33 +36,33 @@ const PortfolioForm = ({ onSubmit, initialData = {} }) => {
               type="text"
               name="title"
               id="title"
-              placeholder="company title"
+              placeholder="project title"
             />
           </FormGroup>
         </Col>
         <Col md={4}>
           <FormGroup className="form-group">
-            <Label htmlFor="company">Company</Label>
+            <Label htmlFor="company">Main Technology</Label>
             <Input
               innerRef={register}
               className="form-control"
               type="text"
               name="company"
               id="company"
-              placeholder="company name"
+              placeholder="main tech"
             />
           </FormGroup>
         </Col>
         <Col md={4}>
           <FormGroup className="form-group">
-            <Label htmlFor="companyWebsite">Company Website</Label>
+            <Label htmlFor="companyWebsite">Github/code Location</Label>
             <Input
               innerRef={register}
               className="form-control"
               type="text"
               name="companyWebsite"
               id="companyWebsite"
-              placeholder="company website"
+              placeholder="code location"
             />
           </FormGroup>
         </Col>
@@ -84,14 +84,14 @@ const PortfolioForm = ({ onSubmit, initialData = {} }) => {
         </Col>
         <Col md={6}>
           <FormGroup className="form-group">
-            <Label htmlFor="jobTitle">Job Title</Label>
+            <Label htmlFor="jobTitle">Development Type</Label>
             <Input
               innerRef={register}
               className="form-control"
               type="text"
               name="jobTitle"
               id="jobTitle"
-              placeholder="job title"
+              placeholder="development type"
             />
           </FormGroup>
         </Col>
