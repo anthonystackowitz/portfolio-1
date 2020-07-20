@@ -16,9 +16,9 @@ import {
 import ActiveLink from "components/shared/ActiveLink";
 
 const BsNavLink = (props) => {
-  const { title, href, className = "" } = props;
+  const { title, href, className = "", passHref } = props;
   return (
-    <ActiveLink activeClassName="active" href={href}>
+    <ActiveLink activeClassName="active" href={href} passHref={passHref} >
       <a className={`nav-link port-navbar-link ${className}`}>{title}</a>
     </ActiveLink>
   );
@@ -125,10 +125,10 @@ const Header = ({ user, userLoading, className }) => {
               <NavItem className="port-navbar-item">
                 <BsNavLink href="/portfolios" title="Portfolios" />
               </NavItem>
-              {/* <NavItem className="port-navbar-item">
-              <BsNavLink href="/secret" title="secret" />
-              </NavItem>
               <NavItem className="port-navbar-item">
+              <BsNavLink href="https://www.linkedin.com/in/anthony-stachowitz-7b4b6937" passHref={true} title="linkedin" />
+              </NavItem>
+              {/* <NavItem className="port-navbar-item">
               <BsNavLink href="/secretssr" title="secretSSR" />
               </NavItem>
               <NavItem className="port-navbar-item">
