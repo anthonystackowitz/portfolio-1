@@ -18,7 +18,7 @@ const Blogs = ({ blogs }) => {
       userLoading={userLoading}
     >
       <Masthead imagePath="/images/home-bg.jpg">
-        <h1>Blogs</h1>
+        <h1>Anthonys Blogs</h1>
         <span className="subheading">Some of my thoughts...</span>
       </Masthead>
       <BasePage title="Anthony's Blogs" className="blog-body">
